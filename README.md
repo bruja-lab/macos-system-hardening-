@@ -39,3 +39,20 @@
 ### Next Tactical Step: LuLu
 
 You have a clean, audited, and hardened baseline. Your system has no active Wi-Fi, no listening backdoors, and you know exactly which port (`en4`) is your only path to the internet.
+
+--
+
+Captain’s Log: LuLu Reverse-Firewall Deployment
+
+**Date:** 2026-05-23 **Objective:** Establish a Zero-Trust Host Intrusion Prevention System (HIPS) to monitor, intercept, and authorize all outgoing network traffic.
+
+|Phase|Action / Command|Forensic Result & Meaning|
+|---|---|---|
+|**1. Procurement**|Downloaded `LuLu` via official Objective-See source.|Acquired cryptographically signed, open-source firewall binary.|
+|**2. Kernel Authorization**|Bypassed macOS restrictions in **Privacy & Security**.|Granted LuLu `System Extension` privileges to intercept packets at the OS network layer.|
+|**3. Baseline Config**|Checked: "Allow Apple Programs".|Auto-whitelisted native macOS daemons to prevent system crashes and extreme alert fatigue.|
+|**4. Zero-Trust Config**|**Unchecked:** "Allow Already Installed Applications".|Revoked implicit trust for all currently installed software. Forced manual authorization for every existing app.|
+|**5. DNS Config**|Checked: "Allow DNS Traffic (Port 53)".|Permitted raw IP lookups. _Note: Prevents firewall gridlock while still blocking unauthorized data exfiltration to those IPs._|
+|**6. Scope Definition**|Authorized Proton VPN via **"Process"** scope (not Remote Endpoint).|Allowed the verified VPN application to dynamically rotate through global secure servers without breaking the tunnel.|
+|**7. Stress Test**|Executed full system reboot.|Purged all existing network sockets; forced all background agents to rebuild connections into LuLu's active net. **Result:** Clean boot, zero unauthorized tracking daemons detected.|
+
