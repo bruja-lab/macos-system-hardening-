@@ -1,7 +1,3 @@
-This is an excellent habit. Maintaining a **Captain's Log** of every change made to your system is exactly what professional Security Engineers do. It ensures that if something ever breaks, you have a breadcrumb trail to trace your steps back.
-
-Here is the log of our work on **Bashful** today, formatted for your Home Lab documentation.
-
 ### Captain’s Log: Bashful System Hardening
 
 **Date:** 2026-05-23
